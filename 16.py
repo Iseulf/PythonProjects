@@ -1,4 +1,4 @@
-#import numpy as np
+#求数组中三数之和与目标数最接近的
 def FindNumber(x,sum):
     for i in range(len(x)):
         for j in range(i+1,len(x)):

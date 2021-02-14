@@ -1,0 +1,13 @@
+@startuml
+state "模型(haarcascade_frontalface_default.xml)" as ReqId <<sdlreceive>>
+state "是否出现人脸" as c <<choice>>
+state "继续观察" as e
+state b <<choice>>
+ReqId --> c: 识别人脸
+c-->b: 出现人脸
+c-->e: 未出现人脸
+e-->c: 识别人脸
+b-->人脸检测
+b-->性别识别
+b-->头部特效
+@enduml
